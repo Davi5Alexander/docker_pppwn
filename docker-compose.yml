@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  pppwn:
+    build:
+      context: .
+      dockerfile: Dockerfile.pppwn
+    container_name: pppwn
+    network_mode: "host"
+    environment:
+      - INTERFACE=eth1
+      - FIRMWAREVERSION=900
+    cap_add:
+    - NET_ADMIN
+    # volumes:
+      # - /media/sda1/pppwn/stages:/pppwn/stages
+    restart: unless-stopped
+    entrypoint: ["/bin/sh", "/pppwn/hack.sh"]
