@@ -1,6 +1,6 @@
 FROM alpine:3.14
 RUN wget https://github.com/Davi5Alexander/docker_pppwn/archive/refs/heads/main.zip --no-cache
-RUN unzip main.zip docker_pppwn-main/pppwn/* -d ./pppwn
+RUN unzip main.zip docker_pppwn-main/pppwn/* -d ./
 RUN apk update --no-cache
 RUN apk add --no-cache python3
 RUN apk add --no-cache py-pip
