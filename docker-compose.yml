@@ -15,4 +15,4 @@ services:
     # volumes:
       # - /media/sda1/pppwn/stages:/pppwn/stages
     restart: unless-stopped
-    entrypoint: ["/bin/sh", "/pppwn/hack.sh"]
+    entrypoint: ["/bin/sh", "/docker_pppwn-main/pppwn/hack.sh"]

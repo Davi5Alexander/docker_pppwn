@@ -3,7 +3,7 @@
 INTERFACE=${INTERFACE}
 FIRMWAREVERSION=${FIRMWAREVERSION}
 SHUTDOWN=false
-DIR="pppwn"
+DIR="docker_pppwn-main/pppwn"
 
 echo -e "\n\n\033[36m _____  _____  _____                 
 |  __ \\|  __ \\|  __ \\
