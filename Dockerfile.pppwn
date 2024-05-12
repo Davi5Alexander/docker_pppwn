@@ -1,5 +1,5 @@
 FROM alpine:3.14
-RUN wget https://github.com/Davi5Alexander/pppwn_docker/archive/refs/heads/main.zip --no-cache
+RUN wget https://github.com/Davi5Alexander/docker_pppwn/archive/refs/heads/main.zip --no-cache
 RUN unzip main.zip -d ./ pppwn
 RUN apk update --no-cache
 RUN apk add --no-cache python3
