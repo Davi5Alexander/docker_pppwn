@@ -9,7 +9,7 @@ services:
     network_mode: "host"
     environment:
       - INTERFACE=eth1
-      - FIRMWAREVERSION=900
+      - FIRMWAREVERSION=1100
     cap_add:
     - NET_ADMIN
     # volumes:
