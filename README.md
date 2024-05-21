@@ -11,7 +11,7 @@ This repository contains Docker files to run PPPwn, developed by TheOfficialFloW
 ## Usage
 
 1. Copy the `Dockerfile.pppwn` and `docker-compose.yml` files.
-2. Edit `docker-compose.yml` and change the values of INTERFACE and FIRMWAREVERSION.
+2. Edit `docker-compose.yml` and change the values of FIRMWAREVERSION (900 or 1100) and INTERFACE.
 3. Run `docker-compose up -d`.
 4. Turn on the PS4.
 
