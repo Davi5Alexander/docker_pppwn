@@ -1,7 +1,7 @@
-
 <div align="center">
-[![PPPwn in Docker](ruta/a/tu/logo.svg){: width="200" height="200" }]()
+  <img src="./pppwn/logo.svg" alt="Logo" width="200"/>
 </div>
+
 # PPPwn in Docker
 
 This repository contains Docker files to run [PPPwn](https://github.com/TheOfficialFloW/PPPwn), developed by TheOfficialFloW, easily using an Alpine image. It's ideal for running on a Raspberry Pi with a dedicated USB to Ethernet port for the PS4. PPPwn is a kernel remote code execution exploit for PlayStation 4 up to FW 11.00. It's a proof-of-concept exploit for [CVE-2006-4304](https://hackerone.com/reports/2177925) that was responsibly reported to PlayStation. I was inspired by [PI-Pwn](https://github.com/stooged/PI-Pwn).
