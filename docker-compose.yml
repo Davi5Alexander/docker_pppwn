@@ -12,7 +12,10 @@ services:
       - FIRMWAREVERSION=900
     cap_add:
     - NET_ADMIN
-    # volumes:
-      # - /media/sda1/pppwn/stages:/pppwn/stages
+    privileged: true
+    volumes:
+      - ./pppwn:/docker_pppwn/pppwn
+      - ./pppwn/web/nginx/default.conf:/etc/nginx/http.d/default.conf
+      - ./pppwn/web/supervisor/supervisord.conf:/etc/supervisord.conf
+      - ./pppwn/web/app/public:/var/www/html
     restart: unless-stopped
-    entrypoint: ["/bin/sh", "/docker_pppwn-main/pppwn/hack.sh"]

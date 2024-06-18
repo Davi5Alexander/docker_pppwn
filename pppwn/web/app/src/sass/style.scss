@@ -1,0 +1,63 @@
+body { font-family: sans-serif; }
+#logContainer { 
+    white-space: pre-wrap; /* Preserva saltos de línea y espacios */
+    font-family: monospace; /* Fuente monoespaciada para mejor legibilidad */
+    // height: 60vh;
+    // background-color: black;
+    color: white;
+}
+#wrapper {
+    position: absolute;
+    width: calc(15vh * 2);
+    margin: 50vh 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: black; */
+}
+#wrapper div {
+    width: 15vh;
+    height: 15vh;
+    float: left;
+    text-align: center;
+    line-height: 4.5;
+}
+#wrapper svg {
+    width: 70%;
+}
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0) scale(1)
+    }
+    50% {
+        transform: rotate(120deg) scale(0)
+    }
+    70% {
+        transform: rotate(-120deg) scale(0)
+    }
+    100% {
+        transform: rotate(0) scale(1)
+    }
+}
+#triangle svg{
+    animation: rotateAnimation 3s ease-in-out infinite;
+}
+#square svg{
+    animation: rotateAnimation 3s -1s ease-in-out infinite;
+}
+#circle svg{
+    animation: rotateAnimation 3s -.5s ease-in-out infinite;
+}
+#cross svg{
+    animation: rotateAnimation 3s -2s ease-in-out infinite;
+}
+.btn svg{
+    width: 1em;
+    height: 1em;
+    fill: white;
+}
+.cls-1 {
+    fill: #fff;
+}
+
+.cls-2 {
+    fill: #101526;
+}

@@ -1,0 +1,48 @@
+.button {
+	height: 2.5em;
+	width: 8em;
+	background-image: none;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+
+	&.loading::after {
+		width: 40px;
+		left: 5px;
+		top: 12px;
+		border-radius: 100%;
+	}
+	
+	&:hover::after {
+		opacity: 0.5;
+		filter: blur(20px);
+		transform: translateY(10px) scaleX(1.2);
+	}
+}
+.loading {
+	border-radius: 50px;
+	width: 50px;
+	left: calc(50vw - 25px);
+}
+.spinner {
+	display: block;
+	width: 34px;
+	height: 34px;
+	top: 8px;
+	left: calc(50% - 17px);
+	background: transparent;
+	box-sizing: border-box;
+	border-top: 4px solid white;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-radius: 100%;
+	animation: spin 0.6s ease-out infinite;
+}
+@keyframes spin {
+	100% {transform: rotate(360deg)}
+}

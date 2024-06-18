@@ -1,0 +1,56 @@
+.svg-container {
+    width: 35vw; /* Ajusta el tamaño del contenedor según tus necesidades */
+    height: 35vw;
+    position: relative; /* Necesario para posicionar el SVG centrado */
+}
+
+.background-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.centered-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 25vw;
+    height: 25vw;
+}
+
+svg#waves{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+#water{
+    animation: move_left 3.5s linear forwards;
+}
+#water2{
+    animation: move_left2 4.2s ease-out forwards;
+    opacity: 0.75;
+}
+
+@keyframes move_left{
+    0%{
+        transform: translatex(0%) translatey(50%)
+    }
+    100%{
+        transform: translatex(-100%) translatey(-50%)
+    }
+    0%{
+        transform: translatex(0%) translatey(50%)
+    }
+}
+@keyframes move_left2{
+    0%{
+        transform: translatex(-100%) translatey(50%)
+    }
+    100%{
+        transform: translatex(0%) translatey(-50%)
+    }
+    0%{
+        transform: translatex(-100%) translatey(50%)
+    }
+}
