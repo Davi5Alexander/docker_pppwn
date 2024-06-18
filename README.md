@@ -14,10 +14,10 @@ This repository contains Docker files to run [PPPwn](https://github.com/TheOffic
 
 ## Usage
 1. Clone the repository.
-2. Edit `docker-compose.yml` and change the values of FIRMWAREVERSION (900, 1000 or 1100) and INTERFACE (eth0, eth1, etc).
+2. Edit `docker-compose.yml` and change the values of `FIRMWAREVERSION` (900, 1000, or 1100) and `INTERFACE` (eth0, eth1, etc).
 3. Run `docker-compose up -d`.
 4. Check the logs, stop the script, start it, and restart it using port 8066 on your server, for example, http://192.168.1.2:8066 (you can change it in `pppwn/web/nginx/default.conf`).
-4. Turn on the PS4.
+5. Turn on the PS4.
 
 On your PS4 (first time):
 
@@ -28,3 +28,5 @@ On your PS4 (first time):
 5. Enter anything for PPPoE User ID and PPPoE Password.
 6. Choose Automatic for DNS Settings and MTU Settings.
 7. Choose Do Not Use for Proxy Server.
+
+![Demo](https://i.imgur.com/dKblI6Y.gif)
