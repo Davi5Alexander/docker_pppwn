@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# exec > /var/www/html/hack.log 2>&1
-# > /var/www/html/hack.log
-# exec | tee -a /var/www/html/hack.log
 exec > >(tee /var/www/html/hack.log) 2>&1 
 INTERFACE=${INTERFACE}
 FIRMWAREVERSION=${FIRMWAREVERSION}
 SHUTDOWN=false
-PPPOECONN=${PPPOECONN}
+PPPOECONN="${PPPOECONN:-false}"
 DIR="pppwn"
 
 echo -e '\033[38;5;25m                    ##        .            
@@ -39,13 +36,11 @@ ret=$?
 if [ $ret -ge 1 ]
    then
 		echo -e "\033[31m\nFailed retrying...\033[0m\n"
-		# ip link set $INTERFACE down
-		# sleep 10
-		# ip link set $INTERFACE up
 		supervisorctl restart pppwn
 	else
 		echo -e "\033[32m\nConsole PPPwned! \033[0m\n"
 		ip link set $INTERFACE down
+		ip link set $INTERFACE up
 		if [ $SHUTDOWN = true ] ; then
 			poweroff
 		else
