@@ -4,6 +4,7 @@ RUN apk update && apk add --no-cache \
     py-pip \
     nginx \
     git \
+    libpcap \
     supervisor
 RUN pip install scapy --break-system-packages
 RUN git clone https://github.com/Davi5Alexander/docker_pppwn.git
